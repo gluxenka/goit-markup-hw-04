@@ -323,6 +323,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .section-title {
   color: #2e2f42;
@@ -362,18 +363,24 @@ img {
   cursor: pointer;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
 .portfolio-list-item .overlay {
   position: absolute;
   transform: translateY(100%);
   top: 0;
   left: 0;
-  width: 360px;
-  height: 300px;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  width: 100%;
+  height: 100%;
   background-color: #4d5ae5;
   color: #f4f4fd;
-  padding: 40px 32px 0 32px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  padding: 40px 32px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-list-item:hover img {
   opacity: 0;
@@ -459,4 +466,8 @@ img {
 }
 .social-container .links-icon-container {
   gap: 16px;
+}
+.social-container .icon-wrapper:hover,
+.social-container .icon-wrapper:focus {
+  background-color: #31d0aa;
 }
